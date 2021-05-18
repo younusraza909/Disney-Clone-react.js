@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import ImageSlider from "./ImageSlider";
+import Viewers from "./Viewers";
+import Movies from "./Movies";
 
 const Container = styled.main`
   overflow-x: hidden;
@@ -25,6 +27,8 @@ const Home = () => {
   return (
     <Container>
       <ImageSlider />
+      <Viewers />
+      <Movies />
     </Container>
   );
 };
