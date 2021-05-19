@@ -32,6 +32,13 @@ const Detail = () => {
           <img src='images/group-icon.png' alt='' />
         </GroupWatchButton>
       </Controls>
+      <SubTitle>2018 . 7m . Family, Fantasy, Kids, Animation</SubTitle>
+      <Description>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis optio
+        iusto nisi tempora recusandae atque illo? Consequatur perspiciatis
+        minima ut vitae expedita inventore, aliquid saepe velit totam illum.
+        Incidunt, iste.
+      </Description>
     </Container>
   );
 };
@@ -62,6 +69,7 @@ const ImageTitle = styled.div`
   min-height: 170px;
   min-width: 200px;
   width: 35vw;
+  margin-top: 5rem;
   img {
     width: 100%;
     height: 100%;
@@ -114,6 +122,20 @@ const AddButton = styled.button`
 `;
 const GroupWatchButton = styled(AddButton)`
   background-color: rgb(0, 0, 0);
+`;
+
+const SubTitle = styled.div`
+  color: rgba(249, 249, 249, 0.7);
+  font-size: 15px;
+  min-height: 20px;
+  margin-top: 26px;
+`;
+
+const Description = styled.div`
+  line-height: 1.4;
+  font-size: 20px;
+  margin-top: 16px;
+  color: rgb(249, 249, 249);
 `;
 
 export default Detail;
