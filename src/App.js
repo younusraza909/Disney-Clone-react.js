@@ -4,9 +4,15 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Detail from "./components/Detail";
 import Login from "./components/Login";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import { setUserLogin } from "./features/user/userSlice";
 import { useDispatch } from "react-redux";
+import PrivateRoute from "./components/PrivateRouting";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,12 +26,13 @@ function App() {
       })
     );
   }
+
   return (
     <div className='App'>
       <Router>
         <Header />
         <Switch>
-          <Route path='/' exact component={Home} />
+          <PrivateRoute path='/' exact component={Home} />
           <Route path='/detail/:id' exact component={Detail} />
           <Route path='/login' exact component={Login} />
         </Switch>
